@@ -75,6 +75,9 @@ const dice = function(max, min){
 console.log(dice(6, 1))
 
 
+
+
+
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
