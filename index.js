@@ -540,12 +540,12 @@ const searchAndDivide = function(st3){
         }
        
     } 
-    twoLists.match
-    twoLists.unmatch
+    twoLists.match = match
+    twoLists.unmatch = unmatch
     return twoLists
 }
-console.log("-------------")
-console.log(searchByTitle("Lord"))
+console.log("------------- searchAndDivide")
+console.log(searchAndDivide("Lord"))
 
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
