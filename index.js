@@ -460,16 +460,58 @@ console.log(onlyInThisMillennium())
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
 */
 
+const getMovieById = function(id){
+    let theMovie 
+    for (let i = 0; i < movies.length; i++){
 
+        if (movies[i].imdbID === id)
+        theMovie = movies[i].Title
+    }
+
+return theMovie
+
+}
+
+console.log(getMovieById("tt1731697"))
 
 
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
 
+const sumAllTheYears = function(){
+
+    let sum = 0
+    for (let i = 0; i < movies.length; i++){
+        sum += parseInt(movies[i].Year)
+    }
+
+return sum
+}
+
+console.log(sumAllTheYears())
+
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
 */
+
+const searchByTitle = function(st3){
+   let movieList = []
+   let movieTitle
+
+   for (let i = 0; i < movies.length; i++){
+       movieTitle = movies[i].Title
+ 
+    if (movieTitle.includes(st3)){
+
+        movieList.push(movieTitle)
+    }
+   }
+
+   return movieList
+}
+
+console.log(searchByTitle("Lord"))
 
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
@@ -477,9 +519,45 @@ console.log(onlyInThisMillennium())
     and another array "unmatch" with all the remaining ones.
 */
 
+const searchAndDivide = function(st3){
+    const match = []
+    const unmatch = []
+    const twoLists = {}
+
+    for (let i = 0; i < movies.length; i++){
+        movieTitle = movies[i].Title
+
+        if (movieTitle.includes(st3)){
+
+            match.push(movieTitle)
+
+        } else {
+
+            unmatch.push(movieTitle)
+        }
+       
+    } 
+    twoLists.match
+    twoLists.unmatch
+    return twoLists
+}
+console.log("-------------")
+console.log(searchByTitle("Lord"))
+
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
 */
+
+const removeIndex = function(index){
+    
+    const movies2 = movies.slice()
+    movies2.splice(index - 1, 1)
+
+    return movies2
+
+}
+
+// console.log(removeIndex(1))
 
 // [EXTRAS] JS Advanced
 
